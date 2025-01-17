@@ -9,12 +9,8 @@ The control plane node should have a unique name. (e.g., k8s-master01)
 ```$ sudo hostnamectl set-hostname "k8s-master01" && exec bash```
 Workers node should have a numerical order (e.g., k8s-worker01..02..03)
 ``` $ sudo hostnamectl set-hostname "k8s-worker01" && exec bash```
-Add the hosts on each node in /etc/hosts. 
-### Master node
-![alt text](image-1.png)
 
-### Worker node 
-![alt text](image-2.png)
+> **Add the hosts on each node in /etc/hosts in Both Master and Worker nodes** 
 
 ### Disable Swap Space on Each Node
 
@@ -94,7 +90,7 @@ After installing Kubernetes tools, start the kubelet service on each node.
 ``` sudo kubeadm init --control-plane-endpoint=k8s-master01 ```
 
 Once above command is executed successfully, we will get following output,
-![alt text](image-3.png)
+![alt text](https://miro.medium.com/v2/resize:fit:720/format:webp/0*J5qWWqqQ39TCnx3x)
 
 From the output above make a note of the command which will be executed on the worker nodes to join the Kubernetes cluster.
 
